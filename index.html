@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server" >
+    	<title>Redes de conectividad social e-M&eacute;xico</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/reset/reset-min.css">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" charset="utf-8" />
+		<link rel="stylesheet" href="css/MenuMatic.css" type="text/css" media="screen" charset="utf-8" />
+
+		<!--[if lt IE 7]>
+			<link rel="stylesheet" href="css/MenuMatic-ie6.css" type="text/css" media="screen" charset="utf-8" />
+		<![endif]-->
+</head>
+<body>
+    
+   <div id="container" >   		
+	    
+		<!-- BEGIN Menu -->
+	    <ul id="nav">
+
+			<li><a href="#">1. CCD</a>
+				<ul>
+					<li><a href="#" onclick="javascript:verMapa()">1.1 Categoria1</a>
+					</li>
+					<li><a href="#" onclick="javascript:verMapa()">1.2 Categoria2</a>
+					</li>
+					<li><a href="#" onclick="javascript:verMapa()">1.3 Categoria3</a>
+					</li>
+				</ul>
+			</li>
+		
+			<li><a href="#">2. Escuelas</a>
+				<ul>
+					<li><a href="#" onclick="javascript:verMapa()">2.1 Primaria</a>
+					</li>
+					<li><a href="#" onclick="javascript:verMapa()">2.2 Secundaria</a>
+					</li>
+					<li><a href="#" onclick="javascript:verMapa()">2.3 Preparatoria</a>
+					</li>
+				</ul>
+			</li>
+		
+			<li><a href="#">3. Hospitales</a>
+				<ul>
+					<li><a href="#" onclick="javascript:verMapa()">3.1 Categoria1</a>
+					</li>
+					<li><a href="#" onclick="javascript:verMapa()">3.2 Categoria2</a>
+					</li>
+					<li><a href="#" onclick="javascript:verMapa()">3.3 Categoria3</a>
+					</li>
+				</ul>
+			</li>
+		
+		</ul>
+	
+		<!-- END Menu -->
+	    <div id="content">	    	 
+			<h1>Mapa</h1>
+
+    	</div>
+    		  
+    </div>
+	<!-- Load the Mootools Framework -->
+	<script src="http://www.google.com/jsapi"></script><script>google.load("mootools", "1.2.1");</script>	
+	
+	<!-- Load the MenuMatic Class -->
+	<script src="js/MenuMatic_0.68.3.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- Create a MenuMatic Instance -->
+	<script type="text/javascript" >
+		window.addEvent('domready', function() {			
+			var myMenu = new MenuMatic({ orientation:'vertical' });			
+		});		
+	</script>
+	
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/pageloader.js"></script>
+	
+
+
+</body>
+</html>

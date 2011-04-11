@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <?php echo $header; ?>
+  <!--[if IE]><style type="text/css"> body {word-wrap: break-word;}</style><![endif]-->
+	<script type="text/javascript">
+		window.addEvent('domready', function() {
+		  $$("input", "select", "textarea").each(function(el) {
+		    el.DoSexy();
+		  });
+		});
+	</script>
+</head>
+<body class='<?=$request->controller?>'>
+	<div id="wrapper">
+			<div id="header" class="clearfix background" style='z-index:10;'>
+					<ul class="bar-list floatR">
+						<li>
+							<?php
+								$user = Wisdom_Utils::factory('Wisdom_User');
+								$texto  = $title  = ($user->auth) ?  $user->fullname : 'Sistema';
+								$url    = ($user->auth) ?  "href='".URL."login/logout'" : '';
+							?>
+								<a title="<?=$title?>" <?=$url?> ><?=$texto?></a>
+						</li>
+					</ul>
+			</div>
+			<div class="clearfix"></div>
+			<div class='content'>
+				<div class='content_wrapper'>
+					<?php if ($user->auth){ ?>
+					<div class="main-navigation">
+						<table >
+							<tr> <td><?=$helper->img('bugs');?> </td></tr>
+							<tr> <td><?=$helper->img('tasks');?> </td></tr>
+							<tr> <td><?=$helper->img('contacts');?> </td></tr>
+							<tr> <td><?=$helper->img('urgent');?> </td></tr> 
+						</table>
+					</div>
+					<?= $helper->navigation(); ?>
+
+					<?php } ?>
+						<?=$content?>
+					</div>
+			</div>
+			<div class="footer background">
+				Powered by Wisdom Tlk
+			</div>
+			
+		</div>
+	</body>	
+</html>
